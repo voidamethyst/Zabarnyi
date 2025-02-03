@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ілля Забарний - Футболіст ФК Борнмут</title>
+    <style>
+        :root {
+            --primary-color: #B21E2D;  /* Bournemouth Red */
+            --secondary-color: #000000;  /* Black */
+            --bg-color: #F4F4F4;
+            --text-color: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--secondary-color);
+            transition: width 0.3s;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .career-timeline {
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .career-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background-color: var(--primary-color);
+        }
+
+        .career-item {
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .career-item::before {
+            content: '';
+            position: absolute;
+            left: -52px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+        }
+
+        .achievements-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .achievement {
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+         .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 400px;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.3s, filter 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            filter: brightness(110%);
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+
+        @media screen and (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">Ілля Забарний</div>
+            <ul>
+                <li><a href="#home">Головна</a></li>
+                <li><a href="#biography">Біографія</a></li>
+                <li><a href="#career">Кар'єра</a></li>
+                <li><a href="#achievements">Досягнення</a></li>
+                <li><a href="#gallery">Галерея</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>Ілля Забарний</h1>
+                <p>Професійний футболіст ФК "Борнмут"</p>
+            </div>
+        </section>
+
+        <section id="biography" class="container">
+            <h2 class="section-title">Біографія</h2>
+            <p>Ілля Забарний - талановитий український футболіст, який зробив значний внесок у розвиток клубу Борнмут. Народився у 2002 в Києві, де вже з раннього дитинства виявляв неабиякий інтерес до футболу. Його шлях до успіху розпочався з академії київського "Динамо".</p>
+        </section>
+
+        <section id="career" class="container">
+            <h2 class="section-title">Кар'єра</h2>
+            <div class="career-timeline">
+                <div class="career-item">
+                    <h3>Початок кар'єри</h3>
+                    <p>Ілля розпочав свою кар'єру в молодіжній академії київського "Динамо", де швидко зарекомендував себе як перспективний захисник. Його виняткові навички та здатність читати гру привернули увагу тренерів і наставників.</p>
+                </div>
+                <div class="career-item">
+                    <h3>Перехід до Борнмут</h3>
+                    <p>У 2023 році Ілля приєднався до ФК "Борнмут", ставши важливою частиною команди. За короткий час він завоював довіру тренера і став ключовим гравцем основного складу.</p>
+                </div>
+                <div class="career-item">
+                    <h3>Національна збірна</h3>
+                    <p>Ілля неодноразово викликався до молодіжної збірної України, де демонстрував високий рівень майстерності та професіоналізму. Його виступи на міжнародній арені відзначалися стабільністю та впевненістю. Нині Ілля виступає за дорослу збірну України</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements" class="container">
+            <h2 class="section-title">Досягнення</h2>
+            <div class="achievements-list">
+                <div class="achievement">
+                    <h3>Чемпіонат України</h3>
+                    <p>Срібний призер молодіжної першості з київським "Динамо", де Ілля показав свою здатність грати на високому рівні.</p>
+                </div>
+                <div class="achievement">
+                    <h3>Кубок України</h3>
+                    <p>Фіналіст у складі молодіжної команди, що стало важливим кроком у його кар'єрі та додало йому цінного досвіду у вирішальних матчах.</p>
+                </div>
+                <div class="achievement">
+                    <h3>Борнмут</h3>
+                    <p>Ілля зарекомендував себе як молодий перспективний гравець основного складу "Борнмута", де його гра привертала увагу не лише вболівальників, але й футбольних аналітиків. Ілля вважається лідером оборони "Борнмуту".</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="container">
+            <h2 class="section-title">Галерея</h2>
+            <div class="gallery">
+                <img src="images/1.png" alt="Ілля Забарний">
+                <img src="images/2.png" alt="У формі Борнмут">
+                <img src="images/3.png" alt="На тренуванні">
+                <img src="images/4.png" alt="У збірній (другий зліва направо)">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <h3>Cторінки</h3>
+            <div class="social-links">
+                <a href="https://www.instagram.com/illiazabarnyi" target="_blank">Instagram</a>
+                <a href="https://www.tiktok.com/@zabarnyi13" target="_blank">TikTok</a>
+                <a href="https://www.transfermarkt.world/ilya-zabarnyi/profil/spieler/659089" target="_blank">Transfermarkt</a>
+            </div>
+            <p>&copy; 2024 ФК "Борнмут". Усі права захищені.</p>
+        </div>
+    </footer>
+</body>
+</html>
